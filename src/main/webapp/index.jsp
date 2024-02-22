@@ -4,34 +4,37 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>codeswithpankaj</title>
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-	<h1>Welcome</h1>
+	<h1>Codes with pankaj</h1>
 	
-	<!--  tags -->
-	
-	<%
-		for(int i = 0; i <= 10 ; i++){
-			out.print("welcome to jsp page....<br>");
-		}
+	<a href="https://www.p4n.store/jsp-and-servlets/jsp/jsp-fundamentals">
+		open jsp tags 
+	</a>
+	<br>
+	<%	// code of core java
+		for(int i = 0; i <= 10 ;i++){
+		
+		out.println(i+" welcome to jsp page ...<br>");	
+		}				
 	%>
 	
 	<%!
-		int get_number(){
+		
+		int get_value(){
 			return 100;
-		}
+	    }
+		
 	%>
+	
+	<%= 45 + 89 %>
+	<%= 45 < 89 %>
 	
 	<%
-		
-			out.print(get_number());
-		
+		out.print(get_value());
 	%>
-	
-	<%= 67 +90 %>
-	
-	<%= 56 < 89 %>
 	
 </body>
 </html>
