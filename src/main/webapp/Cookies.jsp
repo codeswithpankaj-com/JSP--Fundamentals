@@ -4,54 +4,27 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Cookies</title>
 </head>
-<style>
-	td{
-		padding: 10px;
-	}
-</style>
 <body>
-
+	
 	<%
-		
-	// Create a new cookie
 
-    Cookie cookie = new Cookie("username1", "joy");
-	// send cookies 
+	  // create a cookies
+
+	  Cookie cookie = new Cookie("username1", "joy");
 	
-	response.addCookie(cookie);
+	  // Add the cookie to the response
+	  // Set additional attributes (optional)
+
+    	cookie.setPath("/"); // The cookie will be accessible from all pages on the server
+
+    	cookie.setMaxAge(3600); // The cookie will expire in 1 hour (3600 seconds)
+ 
+        response.addCookie(cookie);
 	
 	%>
 	
-	<h1>Read Cookies</h1>
 	
-	<table border="1">
-	
-	
-		<%
-	 // Get the cookies from the request
-
-    Cookie[] cookies = request.getCookies();
-	
-	if (cookies != null) {
-
-        for (Cookie cookie1 : cookies) {
-             
-			
-               out.print("<tr><td>"+cookie1.getName()+"<td><td>"+cookie1.getValue()+"<td><tr>");
-           
-
-            }
-
-        }
-
-  
-    
-	%>
-	</table>
-
-
-
 </body>
 </html>
